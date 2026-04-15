@@ -6,32 +6,87 @@ $placeholder-input-color: #999;
 $input-focus-color: #fff;
 $border-input-color: #007aff;
 
-input {
+.hero-search-wrapper {
+
   @media (max-width: $breakpoint-phone) {
-    width: 90vw;
-    max-width: 20rem;
-    height: 3.5rem;
-    padding: 0 1.5rem;
-
-    font-size: 1rem;
-    border: 2px solid transparent;
-    border-radius: 12px;
-
-    background-color: $background-input-color;
-    color: $input-color;
-
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    outline: none;
-
-    &::placeholder {
-      color: $placeholder-input-color;
-      font-weight: 400;
+    h2 {
+      text-align: center;
     }
 
-    &:focus {
-      background-color: $input-focus-color;
-      border-color: $border-input-color;
-      box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.1);
+    p {
+      text-align: center;
+    }
+
+    input {
+      display: block;
+      width: calc(100% - 3rem);
+      max-width: 420px;
+      margin: 0 auto;
+
+      height: 3.5rem;
+      padding: 0 1.5rem;
+
+      font-size: 1rem;
+      border: 2px solid transparent;
+      border-radius: 12px;
+
+      background-color: $background-input-color;
+      color: $input-color;
+
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      outline: none;
+
+      &::placeholder {
+        color: $placeholder-input-color;
+        font-weight: 400;
+      }
+
+      &:focus {
+        background-color: $input-focus-color;
+        border-color: $border-input-color;
+        box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.1);
+      }
+    }
+
+    .hero-search-suggestions {
+      display: flex;
+      flex-direction: column;
+      padding-block: 1rem;
+      gap: 1rem;
+
+      width: calc(100% - 3rem);
+      max-width: 420px;
+      margin: 0 auto;
+
+      button {
+        height: 2rem;
+        align-self: center;
+        font-size: 1rem;
+      }
+    }
+
+    .hero-search-input-area {
+      position: relative;
+      width: 100%;
+      padding-right: 3rem;
+
+
+      .clear-btn {
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1.2rem;
+        color: #999;
+
+        &:hover {
+          color: #333;
+        }
+      }
     }
   }
 }

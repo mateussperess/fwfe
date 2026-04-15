@@ -39,7 +39,7 @@ function Home() {
     <>
       <HeroSearch
         name="search-heros"
-        placeholder="Busque por um herói (ex: Batman)..."
+        placeholder="Hero Name..."
         value={search}
         onChange={(valor) => setSearch(valor)}
       />
